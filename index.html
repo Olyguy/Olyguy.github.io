@@ -8,8 +8,10 @@
     body {
         max-width: 780px;
         margin: 2rem auto;
+        padding: 0 1rem;
         font: 16px/1.5 system-ui, Arial, sans-serif;
-        color:#111; 
+        color:#111;
+        background:#fff;
     }
     header {
         display:flex; align-items:center; gap:1rem;
@@ -35,6 +37,12 @@
     .two-col li {
         margin-bottom: .35rem;
     }
+    .entry {
+        margin-bottom: .25rem;
+    }
+    .entry + ul {
+        margin-top: .25rem;
+    }
     a {
         text-decoration: none;
     }
@@ -48,12 +56,13 @@
 </head>
 <body>
   <header>
-    <img src="er459175@ucf(1).jpg" alt="mein profile" height="100" />
+    <img src="er459175@ucf(1).jpg" alt="Erkan Altundal" height="100" />
     <div>
       <h1>Erkan Altundal</h1>
-      <div class="meta">Computer Science @ University of Central Florida</div>
+      <div class="meta">Computer Science @ University of Central Florida · Oviedo, FL</div>
       <div class="meta">
-        <a href="mailto:er459175@ucf.edu">er459175@ucf.edu</a> ·
+        <a href="mailto:erkankerem532@gmail.com">erkankerem532@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/erkan-altundal-a98114213" target="_blank" rel="noopener">LinkedIn</a> ·
         <a href="https://github.com/Olyguy" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
@@ -62,9 +71,9 @@
   <main>
     <section>
       <h2>Summary</h2>
-      <p>I’m a CS student at UCF focused on system-level programming and software engineering. Proficient in C/C++, Python, and Java; projects include low-level memory work, simulations, and CLI/UI design.</p>
-      <p>I’ve thrived in team-oriented roles, from mentoring Walmart associates to working under tight deadlines in food service, strengthening communication, adaptability, and leadership.</p>
-      <p>Actively seeking roles in systems software, backend, or cybersecurity, with a goal to learn fast, collaborate well, and ship reliable software.</p>
+      <p>I’m a CS student at UCF working across machine learning, systems programming, and embedded software. I build ML models in Python, write C++ firmware for rocketry data acquisition, and ship full-stack web apps with teams.</p>
+      <p>I’ve thrived in team-oriented roles, from mentoring Walmart associates to training new hires in fast-paced food service, strengthening communication, adaptability, and leadership.</p>
+      <p>Actively seeking early-career roles in AI/ML, software engineering, and systems, with a goal to learn fast, collaborate well, and ship reliable software.</p>
     </section>
 
     <hr/>
@@ -73,10 +82,9 @@
       <h2>Education</h2>
       <ul class="two-col">
         <li>
-          <strong>University of Central Florida</strong> — B.S. Computer Science, <em>Spring 2027</em> · GPA: 3.5 · Orlando, FL
-          <br/><span class="meta">Relevant Course Work: Artificial Intelligence, Machine Learning, Systems Software, Security in Computing, Object-Oriented Programming, Processes for Object-Oriented Software Development</span>
+          <strong>University of Central Florida</strong> — B.S. Computer Science, <em>Expected May 2027</em> · GPA: 3.5 · Orlando, FL
+          <br/><span class="meta">Relevant Coursework: Artificial Intelligence, Machine Learning, Systems Software, Security in Computing, Object-Oriented Programming, Processes for Object-Oriented Software Development</span>
         </li>
-        <li><strong>Valencia College</strong> — A.A., <em>Dec 2023</em> · GPA: 3.5 · Orlando, FL</li>
       </ul>
     </section>
 
@@ -84,23 +92,49 @@
 
     <section>
       <h2>Projects</h2>
+
+      <p class="entry"><strong>UCL Match Predictor</strong> <span class="meta">· Python, XGBoost, Jupyter</span> ·
+        <a href="https://github.com/Olyguy/ucl-match-predictor" target="_blank" rel="noopener">code &amp; README</a></p>
       <ul>
-        <li>
-          <strong>Battleship Game (C)</strong>
-          <a href="https://github.com/Olyguy/Battleship_Game" target="_blank" rel="noopener">code & README</a>
-        </li>
-        <li>
-          <strong>Tennis for Two Simulation (C++, SDL2)</strong>
-          <a href="https://github.com/Olyguy/Tennis_for_Two" target="_blank" rel="noopener">code & README</a>
-        </li>
-        <li>
-          <strong>Ugotta (MERN)</strong>
-          <a href="https://github.com/Olyguy/POOSD-Group-6-Large-Project" target="_blank" rel="noopener">code & README</a>
-        </li>
-        <li>
-          <strong>Geospatial Data Visualization (Python, GeoPandas)</strong>
-          <a href="https://github.com/Olyguy/geospatial-choropleth-maps" target="_blank" rel="noopener">code & README</a>
-        </li>
+        <li>Built an XGBoost classifier predicting UEFA Champions League results (home/draw/away) from 2013–2026 Transfermarkt data.</li>
+        <li>Engineered time-aware features (club and manager Elo ratings, rolling form, starting-XI market value, lineup stability) using only pre-match data to prevent leakage.</li>
+        <li>Reached 52.9% accuracy on 189 Champions League matches from the 2025/26 season, compared to 49.7% from always picking the home team.</li>
+      </ul>
+
+      <p class="entry"><strong>Ugotta</strong> <span class="meta">· MongoDB, Express, React, Node.js</span> ·
+        <a href="https://github.com/Olyguy/POOSD-Group-6-Large-Project" target="_blank" rel="noopener">code &amp; README</a></p>
+      <ul>
+        <li>Built a full-stack social recommendation web app with a 6-person team following an agile development process.</li>
+        <li>Delivered secure user authentication and real-time chat through REST APIs backed by MongoDB.</li>
+      </ul>
+
+      <p class="entry"><strong>Geospatial Data Visualization</strong> <span class="meta">· Python, GeoPandas</span> ·
+        <a href="https://github.com/Olyguy/geospatial-choropleth-maps" target="_blank" rel="noopener">code &amp; README</a></p>
+      <ul>
+        <li>Built interactive choropleth maps of U.S. and Turkish regions by joining boundary data with regional datasets.</li>
+      </ul>
+
+      <p class="entry"><strong>Tennis for Two</strong> <span class="meta">· C++, SDL2</span> ·
+        <a href="https://github.com/Olyguy/Tennis_for_Two" target="_blank" rel="noopener">code &amp; README</a></p>
+      <ul>
+        <li>Recreated the classic Tennis for Two as a real-time C++ simulation using SDL2 for rendering and input.</li>
+      </ul>
+    </section>
+
+    <hr/>
+
+    <section>
+      <h2>Technical Experience</h2>
+      <p class="entry"><strong>Knights Experimental Rocketry</strong> — Launch &amp; Test Infrastructure, Software · Fall 2026–Present · Orlando, FL</p>
+      <ul>
+        <li>Developing C++ firmware with PlatformIO for the team’s data acquisition (DAQ) system for launch and test operations.</li>
+        <li>Writing a custom SPI driver for the ADS1256 24-bit ADC to configure it and read sensor channels on an Arduino-based board.</li>
+      </ul>
+
+      <p class="entry"><strong>Knight Hacks</strong> — 3D Artist / Game Developer · Fall 2024–Spring 2026 · Orlando, FL</p>
+      <ul>
+        <li>Modeled and animated 3D characters and environment assets in Blender for a 4-person game development team.</li>
+        <li>Integrated the models and animations into the team’s Unity 6 game.</li>
       </ul>
     </section>
 
@@ -108,24 +142,15 @@
 
     <section>
       <h2>Work Experience</h2>
-      <p><strong>Walmart Inc</strong> — Associate · Jan 2024–May 2025</p>
+      <p class="entry"><strong>Walmart</strong> — Associate · Jan 2024–May 2025 · Casselberry, FL</p>
       <ul>
-        <li>Picked/staged/loaded 100+ online grocery orders per shift via digital fulfillment tools.</li>
-        <li>Verified stock status through Walmart's digital inventory system 100+ times a shift, reducing order errors and improving pick-time efficiency.</li>
-        <li>Took initiative to mentor new team members on handheld device usage and order workflow, contributing to faster onboarding and improved team coordination.</li>
+        <li>Verified stock in Walmart’s inventory system 100+ times per shift, reducing order errors and pick times.</li>
+        <li>Mentored new associates on handheld devices and order workflow, speeding up onboarding.</li>
       </ul>
 
-      <p><strong>Mario’s Pizza LLC</strong> — Cook, Driver, Server · Jan 2020–Jul 2022</p>
+      <p class="entry"><strong>Mario’s Pizza</strong> — Cook, Driver, Server · Jan 2020–Jul 2022 · Daytona Beach, FL</p>
       <ul>
-        <li>Prepared and packaged 40+ Italian meals per shift and delivered to customers efficiently while collaborating with kitchen and service teams.</li>
-        <li>Served 50–80 customers/shift with accuracy and professionalism in a high-volume setting.</li>
-        <li>Trained new hires on delivery routing, order handling, and POS operation, demonstrating leadership and reliability in fast-paced shifts.</li>
-      </ul>
-
-      <p><strong>Vatan Computer</strong> — Associate · May 2018–Oct 2018</p>
-      <ul>
-        <li>Advised customers on custom PCs, components, and gaming accessories.</li>
-        <li>Improved display layouts for high-demand products to boost access and sales.</li>
+        <li>Prepared and delivered 40+ orders per shift; trained new hires on routing, order handling, and POS.</li>
       </ul>
     </section>
 
@@ -134,31 +159,11 @@
     <section>
       <h2>Skills</h2>
       <ul>
-        <li><strong>Languages:</strong> C++ (STL, Memory Management, Algorithms), C, C#, Python, Java, JavaScript, PHP</li>
-        <li><strong>Web Technologies:</strong> HTML, CSS, React, Node.js, Express</li>
-        <li><strong>Database:</strong> MongoDB, MySQL</li>
-        <li><strong>Tools:</strong> Git/GitHub, VS Code, Microsoft Word, Excel, PowerPoint, Google Workspace, Unity 6, Unreal Engine 5, Blender</li>
-        <li><strong>Soft Skills:</strong> Teamwork, Written and Oral Communication</li>
-        <li><strong>Languages:</strong> English (Fluent), Turkish (Native)</li>
-      </ul>
-    </section>
-
-    <hr/>
-
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>Beginning C++ Programming – From Beginner to Beyond – Udemy (Jan 2026)</li>
-      </ul>
-    </section>
-
-    <hr/>
-
-    <section>
-      <h2>Campus Involvement</h2>
-      <ul>
-        <li>Web Dev in Esports Club — Present</li>
-        <li>Knight Hacks Club, Member, Fall 2024 – Spring 2026</li>
+        <li><strong>Languages:</strong> C++, C, Python, Java, JavaScript, C#, PHP, SQL, HTML/CSS</li>
+        <li><strong>Machine Learning &amp; Data:</strong> XGBoost, pandas, GeoPandas, Jupyter, feature engineering, model evaluation</li>
+        <li><strong>Frameworks &amp; Libraries:</strong> React, Node.js, Express, SDL2</li>
+        <li><strong>Tools:</strong> Git, PlatformIO, Arduino, MongoDB, MySQL, Unity, Unreal Engine 5, Blender</li>
+        <li><strong>Spoken Languages:</strong> English (fluent), Turkish (native)</li>
       </ul>
     </section>
   </main>
